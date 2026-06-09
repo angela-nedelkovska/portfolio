@@ -1,0 +1,58 @@
+.skills {
+  overflow: hidden;
+  padding: var(--space-lg2) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+}
+
+.skills-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-pill {
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: var(--space-xxs) var(--space-md);
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: var(--font-body);
+  letter-spacing: 0.04em;
+  color: var(--text);
+ 
+  background: var(--white-muted-gradient);
+  
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.skills-track-left {
+  animation: scroll-left 40s linear infinite;
+}
+
+.skills-track-right {
+  animation: scroll-right 40s linear infinite;
+}
+
+.skills-track:hover {
+  animation-play-state: paused;
+}

@@ -1,0 +1,48 @@
+.ssd-bottom span{
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(11rem, 10.47vw , 14rem);
+    color: var(--white-muted);
+
+    overflow: hidden;
+}
+
+.ssd-text{
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-align: center;
+    padding: var(--space-xxs) var(--space-md);
+    border: 1px solid var(--border);
+    background-color: var(--white-muted-gradient);
+    border-radius: 50px;
+    width: 100%;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+}
+.ssd-top{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.ssd-bottom{
+    position: absolute;
+    z-index: -1;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ssd-banner{
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}

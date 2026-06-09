@@ -1,0 +1,19 @@
+#about-text{
+    text-align: center;
+}
+.section-txt{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+}
+.about-content{
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-between;
+    gap:100px;
+
+    .about-left, .about-right{
+        width: 50%;
+    }
+}

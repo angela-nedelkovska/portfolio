@@ -1,0 +1,109 @@
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon::before,
+.icon::after {
+  content: '';
+  position: absolute;
+  background: var(--text);
+}
+
+/*card 1 icon*/
+.icon-line::before { width: 1px; height: 100%; }
+.icon-line::after  { display: none; }
+
+/*card 2 icon*/
+.icon-plus::before { width: 1px; height: 100%; }
+.icon-plus::after  { width: 100%; height: 1px; }
+
+/* card 3 icon*/
+.icon-star::before { width: 1px; height: 100%; transform: none; }
+.icon-star::after  { width: 1px; height: 100%; transform: rotate(90deg); }
+.icon-star .line:nth-child(1) { 
+  position: absolute;
+  background: var(--text);
+  width: 1px; 
+  height: 100%; 
+  transform: rotate(45deg); 
+}
+
+/* card 4 icon */
+.icon-star2::before { width: 1px; height: 100%; transform: none; }
+.icon-star2::after  { width: 100%; height: 1px; transform: none; }
+.icon-star2 .line:nth-child(1) { 
+  position: absolute;
+  background: var(--text);
+  width: 1px; 
+  height: 100%; 
+  transform: rotate(45deg); 
+}
+.icon-star2 .line:nth-child(2) { 
+  position: absolute;
+  background: var(--text);
+  width: 1px; 
+  height: 100%; 
+  transform: rotate(-45deg); 
+}
+
+.icon::before,
+.icon::after,
+.icon .line {
+  background: var(--text);
+  transition: var(--transition);
+}
+
+.icon:hover::before,
+.icon:hover::after {
+  background: var(--accent);
+}
+
+.icon:hover .line {
+  background:var(--accent);
+}
+
+.process-card-title{
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.process-card-text{
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+.process-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 33%;
+  transition: var(--transition);
+
+  &:hover{
+    border: 1px solid var(--accent);
+    background-color: var(--accent-muted);
+  }
+
+}
+
+.process-cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
