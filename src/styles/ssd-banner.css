@@ -1,9 +1,8 @@
 .ssd-bottom span{
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(11rem, 10.47vw , 14rem);
+    font-size: clamp(6.8rem, 10.47vw , 14rem);
     color: var(--white-muted);
-
     overflow: hidden;
 }
 
@@ -16,10 +15,8 @@
     background-color: var(--white-muted-gradient);
     border-radius: 50px;
     width: 100%;
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
 }
 .ssd-top{
     position: relative;
@@ -45,4 +42,42 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; 
+}
+
+@media screen and (max-width: 1440px) {
+    .ssd-banner{
+        height: 20vh;
+    }
+    
+}
+@media screen and (max-width: 1024px){
+    .ssd-text{
+        font-size: 1.2rem;
+    }
+    .ssd-bottom span{
+        font-size: 7.2rem !important;
+        line-height: 0.95;
+        text-align: center;
+    }
+    .ssd-bottom{
+        white-space: wrap;
+    }
+    .ssd-banner{
+        height: 25vh;
+    }
+}
+@media screen and (max-width: 768px){
+    .ssd-banner{
+        height: 37vh;
+    }
+    .ssd-top{
+        padding: 0 var(--space-sm);
+    }
+    .ssd-text{
+        font-size: 1.3rem;
+    }
+    .ssd-bottom span{
+        font-size: 7.7rem !important;
+        line-height: 0.8;
+    }
 }

@@ -27,6 +27,7 @@
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
+  --space-md2: 3.125rem;
   --space-lg: 4rem;
   --space-lg2: 6.25rem;
   --space-xl: 8rem;
@@ -79,11 +80,11 @@ a {
   gap: 50px;
 }
 .section-title{
-    font-size: clamp(4rem, 7vw, 5.2rem);
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+  font-size: clamp(4rem, 7vw, 5.2rem);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 .section-text{
   font-size: 1.5rem;
@@ -93,4 +94,20 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+@media screen and (max-width: 1440px) {
+  .section{
+    padding: var(--space-lg) var(--space-lg);
+  }
+}
+@media screen and (max-width: 1024px){
+  .section{
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+@media screen and (max-width: 768px){
+    .section {
+      padding: var(--space-lg) var(--space-sm);
+    }
 }

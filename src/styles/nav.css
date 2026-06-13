@@ -3,10 +3,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
-    li{
-        list-style: none;
-    }
+}
+.nav-links  li{
+    list-style: none;
 }
 .nav-inner{
     display: flex;
@@ -16,18 +15,57 @@
 .nav{
     padding: var(--space-sm) var(--space-xl);
     position: sticky;
-    z-index: 100;
+    z-index: 1001;
     top: 0;
     background-color: var(--bg);
     border-bottom: 1px solid transparent;
+}
+.nav .hamburger {
+    display: none;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger span {
+    position: absolute;
+    left: 6px;
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.hamburger span:nth-child(1) {
+    top: 12px;
+}
+.hamburger span:nth-child(2) {
+    top: 20px;
+}
+.hamburger span:nth-child(3) {
+    top: 28px;
+}
+.hamburger.active span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
 }
 .nav-scrolled{
     border-image: linear-gradient(to right, transparent,rgba(255, 255, 255, 0.15),transparent) 1;
 }
 
+
+
 .logo{
     font-family: var(--font-display) !important;
-    font-size: clamp(1.25rem, 3vw, 2.4rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -61,4 +99,55 @@
     background-color: var(--accent-muted);
     border: 1px solid var(--accent);
     color: var(--accent);
+}
+
+
+@media screen and (max-width: 1440px){
+    .nav {
+        padding: var(--space-sm) var(--space-md);
+   }
+}
+@media screen and (max-width: 1400px) {
+ 
+     .hamburger {
+        display: block !important;
+    }
+
+    .nav-links {
+        position: fixed;
+        /* inset: 0; */
+        top: 90.4px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        background: var(--input-bg);
+        transform: translateX(100%);
+        transition: var(--transition);
+        z-index: 990;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        gap: 60px;
+    }
+
+  .primary-btn {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1000px){
+    .nav-links{
+        top: 79.06px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .nav {
+        padding: var(--space-sm) var(--space-sm);
+   }
 }

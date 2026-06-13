@@ -7,15 +7,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    span{
+}
+.contact-bottom span{
     font-family: var(--font-display);
     font-weight: 400;
     font-size: clamp(11rem, 10.4vw , 14rem);
     color: var(--white-muted);
-
     overflow: hidden;
-    }
 }
 
 @keyframes contact-scroll {
@@ -26,8 +24,6 @@
   animation: contact-scroll 40s linear infinite;
 }
 
-
-
 .contact-section{
     position: relative;
     height: 100%;
@@ -37,27 +33,24 @@
     justify-content: center;
     overflow: hidden; 
 }
-
 .left-side-contact{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
     width: 100%;
-
-    p{
-        font-family: var(--font-display);
-        font-weight: 400;
-        font-size: 3.3rem;
-        line-height: 1.2;
-        
-        span{
-            background: linear-gradient(to right, #e3e3e3, #838383);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
+}
+.left-side-contact p{
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 1.2;
+}
+.left-side-contact p span{
+    background: linear-gradient(to right, #e3e3e3, #838383);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .right-side-contact{
     width: 100%;
@@ -67,15 +60,13 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-
-    a{
-        fill: var(--text);
-        transition: var(--transition);
-
-        &:hover{
-            fill: var(--accent);
-        }
-    }
+}
+.contact-icons a{
+    fill: var(--text);
+    transition: var(--transition);
+}
+.contact-icons a:hover{
+    fill: var(--accent);
 }
 .input-columns{
     width: 100%;
@@ -91,51 +82,51 @@ form{
     justify-content: flex-start;
     gap: 20px;
 
-    label{
-        width: 100%;
-        font-size: 1.2rem;
-        font-weight: 300;
-    }
-    input{
-        width: 100%;
-        background-color: var(--input-bg);
-        border: 1px solid transparent;
-        border-radius: 30px;
-        height: 45px;
-        padding: 1rem;
-        transition: var(--transition);
-
-        &::placeholder{
-            font-family: var(--font-body);
-            font-size: 1rem;
-        }
-
-        &:hover, &:focus{
-            border: 1px solid var(--accent);
-        }
-    }
-    textarea{
-        width: 100%;
-        background-color: var(--input-bg);
-        border: 1px solid transparent;
-        border-radius: 15px;
-        padding: 1rem;
-        transition: var(--transition);
-
-        &::placeholder{
-            font-family: var(--font-body);
-            font-size: 1rem;
-        }
-
-        &:hover, &:focus {
-            border: 1px solid var(--accent);
-        }
-    }
+ 
+    
+    
     button{
         width: 100%;
     }
 }
-
+form  label{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+form input{
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    height: 45px;
+    padding: 1rem;
+    transition: var(--transition);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+}
+form input::placeholder, form textarea::placeholder{
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+form input:hover, form input:focus,form textarea:hover, form textarea:focus{
+    outline: none;
+    border: 1px solid var(--accent);
+}
+form textarea{
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: var(--transition);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+}
 .contact-form{
     position: relative;
     display: flex;
@@ -144,12 +135,10 @@ form{
     align-items: start;
     justify-content: space-between;
     z-index: 1;
-
     background-color: var(--bg);
-    border: 1px solid transparent;
+    border: 1px solid var(--border);
     border-radius: 15px;
-    border-image: linear-gradient(110deg, rgba(255, 255, 255, 0.05),rgba(255, 255, 255, 0.35),rgba(255, 255, 255, 0.05)) 1;
-    
+    /* border-image: linear-gradient(110deg, rgba(255, 255, 255, 0.05),rgba(255, 255, 255, 0.35),rgba(255, 255, 255, 0.05)) 1; */
     padding: var(--space-md);
 }
 
@@ -164,3 +153,39 @@ form{
   align-items: center;
   gap: 50px;
 }
+
+@media screen and (max-width: 1440px) {
+  .contact{
+    padding: var(--space-lg) 0;
+  }
+  .contact-section{
+    padding: 0 var(--space-lg);
+  }
+}
+@media screen and (max-width: 1024px){
+    .contact-form{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contact-section {
+        padding: 0 var(--space-md);
+    }
+    
+}
+@media screen and (max-width: 760px){
+    .contact-section {
+        padding: 0 var(--space-sm);
+    }
+}
+@media screen and (max-width: 768px){
+    .left-side-contact p{
+            font-size: 2.88rem;
+        }
+    .contact-bottom{
+        display: none;
+    }
+    
+}
+
+
+

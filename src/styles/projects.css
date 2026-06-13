@@ -1,0 +1,97 @@
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.projects-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: left;
+}
+.projects-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+[data-page="home"] .projects-filter {
+  display: none;
+}
+.projects-tag {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.projects-tag:hover {
+  border-color: var(--accent);
+}
+.projects-tag.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+.project-card {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color var(--transition), background-color var(--transition);
+  padding: var(--space-sm);
+}
+.project-card:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-muted);
+}
+.project-card img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.project-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: var(--space-xxs);
+}
+.project-card-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.project-card-tag {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--white-muted-gradient);
+}
+.project-card-title {
+  font-family: var(--font-body);
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+

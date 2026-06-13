@@ -5,11 +5,16 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+footer  span{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
 
-    span{
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 300;
-        text-align: center;
+@media screen and (max-width: 768px){
+    footer{
+        padding: var(--space-sm) var(--space-md);
     }
 }
