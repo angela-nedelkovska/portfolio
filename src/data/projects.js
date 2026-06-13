@@ -35,7 +35,7 @@ const projects=[
     {
         id: 4,
         slug: 'och',
-        title: "OncologyCare Hospital: Website Development",
+        title: "Oncology Care Hospital: Website Development",
         tags: ['Bootstrap', 'HTML5', 'SCSS'],
         image: ochCover,
         url: '/portfolio/pages/projects/och.html',
