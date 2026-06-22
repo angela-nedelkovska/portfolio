@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
  
 export default defineConfig({
   root: "src",
-    build: {
+  build: {
     emptyOutDir: true,
     assetsInlineLimit: 0,
     rollupOptions: {
@@ -19,5 +19,5 @@ export default defineConfig({
     },
     outDir: "../build",
   },
-  base: '/portfolio/',
+  base: '/an-portfolio/',
 });
