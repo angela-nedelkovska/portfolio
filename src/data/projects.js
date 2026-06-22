@@ -11,7 +11,7 @@ const projects=[
         title: "Langford: Fashion E-commerce Website",
         tags: ['UX/UI', 'HTML5', 'CSS3'],
         image: langfordCover,
-        url: '/portfolio/pages/projects/langford.html',
+        url: '/an-portfolio/pages/projects/langford.html',
         date: '2026-06',
     },
     {
@@ -20,7 +20,7 @@ const projects=[
         title: "Kinetics Fitness Studio: A new website",
         tags: ['UX/UI', 'WordPress'],
         image: kineticsCover,
-        url: '/portfolio/pages/projects/kinetics.html',
+        url: '/an-portfolio/pages/projects/kinetics.html',
         date: '2026-06',
     },
     {
@@ -29,7 +29,7 @@ const projects=[
         title: "MyPace: Fitness App",
         tags: ['UX/UI', 'Figma'],
         image: mypaceCover,
-        url: '/portfolio/pages/projects/mypace.html',
+        url: '/an-portfolio/pages/projects/mypace.html',
         date: '2026-06',
     },
     {
@@ -38,7 +38,7 @@ const projects=[
         title: "Oncology Care Hospital: Website Development",
         tags: ['Bootstrap', 'HTML5', 'SCSS'],
         image: ochCover,
-        url: '/portfolio/pages/projects/och.html',
+        url: '/an-portfolio/pages/projects/och.html',
         date: '2026-06',
     },
     {
@@ -47,7 +47,7 @@ const projects=[
         title: "Valto: Mobile Banking Application",
         tags: ['UX/UI', 'Figma'],
         image: valtoCover,
-        url: '/portfolio/pages/projects/valto.html',
+        url: '/an-portfolio/pages/projects/valto.html',
         date: '2026-06',
     },
 ]
