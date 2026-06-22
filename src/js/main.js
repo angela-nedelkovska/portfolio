@@ -13,7 +13,9 @@ import '../styles/single-project.css';
 import './nav.js';
 import './hero-parallax.js';
 import './projects.js';
+// import './projectPage.js';
 import projects from '../data/projects.js'
+import { projectPage } from './projectPage.js';
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -31,3 +33,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         hamburger.classList.remove('active');
     });
 });
+
+if(document.querySelector(".projects-page")){
+    projectPage();
+}

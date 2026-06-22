@@ -1,6 +1,7 @@
 import projects from '../data/projects.js';
 
-const slug = document.body.dataset.project;
+export const projectPage=()=>{
+  const slug = document.body.dataset.project;
 const current = projects.find(p => p.slug === slug);
 
 // render title and tags
@@ -30,3 +31,5 @@ document.querySelector('.more-projects-grid').innerHTML = more
     </a>
   `)
   .join('');
+}
+
