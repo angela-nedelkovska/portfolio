@@ -15,13 +15,13 @@
           </div>
         </a>
       `).join(``)}s(),o&&(o.addEventListener(`click`,e=>{let t=e.target.closest(`[data-tag]`);t&&(n=t.dataset.tag,r(),s())}),r())}var s=()=>{let e=document.body.dataset.project,t=i.find(t=>t.slug===e);document.querySelector(`.project-title`).textContent=t.title,document.querySelector(`.project-tags`).innerHTML=t.tags.map(e=>`<span class="project-tag">${e}</span>`).join(``);let n=i.filter(t=>t.slug!==e).slice(0,3);document.querySelector(`.more-projects-grid`).innerHTML=n.map(e=>`
-    <a href="${e.url}" class="project-card">
-      <img src="${e.image}" alt="${e.title}">
-      <div class="project-card-footer">
-        <div class="project-card-tags">
-          ${e.tags.map(e=>`<span class="project-card-tag">${e}</span>`).join(``)}
+      <a href="${e.url}" class="project-card">
+        <img src="${e.image}" alt="${e.title}">
+        <div class="project-card-footer">
+          <div class="project-card-tags">
+            ${e.tags.map(e=>`<span class="project-card-tag">${e}</span>`).join(``)}
+          </div>
+          <h3 class="project-card-title">${e.title}</h3>
         </div>
-        <h3 class="project-card-title">${e.title}</h3>
-      </div>
-    </a>
-  `).join(``)},c=document.getElementById(`hamburger`),l=document.querySelector(`.nav-links`);c&&l&&c.addEventListener(`click`,()=>{l.classList.toggle(`active`),c.classList.toggle(`active`)}),document.querySelectorAll(`.nav-links a`).forEach(e=>{e.addEventListener(`click`,()=>{l.classList.remove(`active`),c.classList.remove(`active`)})}),document.querySelector(`.projects-page`)&&s();
+      </a>
+    `).join(``)};s();var c=document.getElementById(`hamburger`),l=document.querySelector(`.nav-links`);c&&l&&c.addEventListener(`click`,()=>{l.classList.toggle(`active`),c.classList.toggle(`active`)}),document.querySelectorAll(`.nav-links a`).forEach(e=>{e.addEventListener(`click`,()=>{l.classList.remove(`active`),c.classList.remove(`active`)})}),document.querySelector(`.projects-page`)&&s();
