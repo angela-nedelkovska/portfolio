@@ -19,5 +19,5 @@ export default defineConfig({
     },
     outDir: "../build",
   },
-  base: '/an-portfolio/',
+  base: '/portfolio/',
 });
